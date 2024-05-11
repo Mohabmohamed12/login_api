@@ -25,7 +25,7 @@ urlpatterns = [
     # api
     # path('user/list',UserViewSet.as_view({'get': 'list'}))c,
     path('api/register',RegisterUserAPIView.as_view()),
-    path('api/login',LoginView.as_view(),name='login'),
+    path('api/login/',LoginView.as_view(),name='login'),
     path('api/change-password/<slug:slug>/', PasswordChangeAPI.as_view(), name='api_change_password'),
     path('api/logout/',LogoutView.as_view(),name='logout'),
     path('api/profile/<slug:slug>',ProfileAPi.as_view()),
